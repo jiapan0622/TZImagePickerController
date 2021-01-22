@@ -177,11 +177,7 @@
         self.sortAscendingByModificationDate = YES;
         self.autoDismiss = YES;
         self.columnNumber = columnNumber;
-        self.showSelectedIndex = YES;
-        self.iconThemeColor = [UIColor colorWithRed:35/255.0 green:24/255.0 blue:158/255.0 alpha:1.0];
-        self.naviBgColor = UIColor.whiteColor;
-        self.naviTitleColor = UIColor.blackColor;
-        self.barItemTextColor = UIColor.blackColor;
+
         [self configDefaultSetting];
         
         if (![[TZImageManager manager] authorizationStatusAuthorized]) {
@@ -273,23 +269,26 @@
 }
 
 - (void)configDefaultSetting {
+    self.showSelectedIndex = YES;
+    self.iconThemeColor = [UIColor colorWithRed:35/255.0 green:24/255.0 blue:158/255.0 alpha:1.0];
     self.autoSelectCurrentWhenDone = YES;
     self.timeout = 30;
     self.photoWidth = 828.0;
     self.photoPreviewMaxWidth = 600;
-    self.naviTitleColor = [UIColor whiteColor];
     self.naviTitleFont = [UIFont systemFontOfSize:17];
     self.barItemTextFont = [UIFont systemFontOfSize:15];
-    self.barItemTextColor = [UIColor whiteColor];
     self.allowPreview = YES;
+
     // 2.2.26版本，不主动缩放图片，降低内存占用
     self.notScaleImage = YES;
     self.needFixComposition = NO;
-    self.statusBarStyle = UIStatusBarStyleLightContent;
+    self.statusBarStyle = UIStatusBarStyleDefault;
     self.cannotSelectLayerColor = [[UIColor whiteColor] colorWithAlphaComponent:0.8];
     self.allowCameraLocation = YES;
-    
-    self.iconThemeColor = [UIColor colorWithRed:31 / 255.0 green:185 / 255.0 blue:34 / 255.0 alpha:1.0];
+    self.naviBgColor = UIColor.whiteColor;
+    self.naviTitleColor = UIColor.blackColor;
+    self.barItemTextColor = UIColor.blackColor;
+    self.showSelectedIndex = YES;
     [self configDefaultBtnTitle];
     
     CGFloat cropViewWH = MIN(self.view.tz_width, self.view.tz_height) / 3 * 2;

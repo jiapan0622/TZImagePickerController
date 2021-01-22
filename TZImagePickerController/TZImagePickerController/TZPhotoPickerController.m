@@ -294,7 +294,7 @@ static CGFloat itemMargin = 5;
     
     _doneButton.backgroundColor = [UIColor colorWithRed:35/255.0 green:24/255.0 blue:158/255.0 alpha:1.0];
     [_doneButton setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
-    [_doneButton setTitleColor:[UIColor colorWithRed:35/255.0 green:24/255.0 blue:158/255.0 alpha:1.0] forState:UIControlStateDisabled];
+    [_doneButton setTitleColor:[UIColor whiteColor] forState:UIControlStateDisabled];
     _doneButton.enabled = tzImagePickerVc.selectedModels.count || tzImagePickerVc.alwaysEnableDoneBtn;
     
     _numberImageView = [[UIImageView alloc] initWithImage:tzImagePickerVc.photoNumberIconImage];

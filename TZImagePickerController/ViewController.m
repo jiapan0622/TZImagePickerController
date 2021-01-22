@@ -216,7 +216,7 @@
             imagePickerVc.autoSelectCurrentWhenDone = NO;
             imagePickerVc.allowPickingOriginalPhoto = self.allowPickingOriginalPhotoSwitch.isOn;
             imagePickerVc.allowPickingMultipleVideo = self.allowPickingMuitlpleVideoSwitch.isOn;
-            imagePickerVc.showSelectedIndex = self.showSelectedIndexSwitch.isOn;
+//            imagePickerVc.showSelectedIndex = self.showSelectedIndexSwitch.isOn;
             imagePickerVc.isSelectOriginalPhoto = _isSelectOriginalPhoto;
             imagePickerVc.modalPresentationStyle = UIModalPresentationFullScreen;
             [imagePickerVc setDidFinishPickingPhotosHandle:^(NSArray<UIImage *> *photos, NSArray *assets, BOOL isSelectOriginalPhoto) {
@@ -360,7 +360,7 @@
     imagePickerVc.statusBarStyle = UIStatusBarStyleLightContent;
     
     // 设置是否显示图片序号
-    imagePickerVc.showSelectedIndex = self.showSelectedIndexSwitch.isOn;
+//    imagePickerVc.showSelectedIndex = self.showSelectedIndexSwitch.isOn;
     
     // 设置拍照时是否需要定位，仅对选择器内部拍照有效，外部拍照的，请拷贝demo时手动把pushImagePickerController里定位方法的调用删掉
     // imagePickerVc.allowCameraLocation = NO;
