@@ -289,7 +289,11 @@ static CGFloat itemMargin = 5;
     _doneButton = [UIButton buttonWithType:UIButtonTypeCustom];
     _doneButton.titleLabel.font = [UIFont systemFontOfSize:16];
     [_doneButton addTarget:self action:@selector(doneButtonClick) forControlEvents:UIControlEventTouchUpInside];
-    [_doneButton setTitle:tzImagePickerVc.doneBtnTitleStr forState:UIControlStateNormal];
+    if (tzImagePickerVc.selectedModels.count > 0) {
+        [_doneButton setTitle:[NSString stringWithFormat:@"完成(%zd)",tzImagePickerVc.selectedModels.count] forState:UIControlStateNormal];
+    } else {
+        [_doneButton setTitle:tzImagePickerVc.doneBtnTitleStr forState:UIControlStateNormal];
+    }
     [_doneButton setTitle:tzImagePickerVc.doneBtnTitleStr forState:UIControlStateDisabled];
     
     _doneButton.backgroundColor = [UIColor colorWithRed:35/255.0 green:24/255.0 blue:158/255.0 alpha:1.0];
@@ -298,7 +302,8 @@ static CGFloat itemMargin = 5;
     _doneButton.enabled = tzImagePickerVc.selectedModels.count || tzImagePickerVc.alwaysEnableDoneBtn;
     
     _numberImageView = [[UIImageView alloc] initWithImage:tzImagePickerVc.photoNumberIconImage];
-    _numberImageView.hidden = tzImagePickerVc.selectedModels.count <= 0;
+    _numberImageView.hidden = YES;
+//    _numberImageView.hidden = tzImagePickerVc.selectedModels.count <= 0;
     _numberImageView.clipsToBounds = YES;
     _numberImageView.contentMode = UIViewContentModeScaleAspectFit;
     _numberImageView.backgroundColor = [UIColor clearColor];
@@ -308,8 +313,9 @@ static CGFloat itemMargin = 5;
     _numberLabel.adjustsFontSizeToFitWidth = YES;
     _numberLabel.textColor = [UIColor whiteColor];
     _numberLabel.textAlignment = NSTextAlignmentCenter;
-    _numberLabel.text = [NSString stringWithFormat:@"%zd",tzImagePickerVc.selectedModels.count];
-    _numberLabel.hidden = tzImagePickerVc.selectedModels.count <= 0;
+//    _numberLabel.text = [NSString stringWithFormat:@"%zd",tzImagePickerVc.selectedModels.count];
+//    _numberLabel.hidden = tzImagePickerVc.selectedModels.count <= 0;
+    _numberLabel.hidden = YES;
     _numberLabel.backgroundColor = [UIColor clearColor];
     
     _divideLine = [[UIView alloc] init];
