@@ -159,6 +159,7 @@
     TZAlbumPickerController *albumPickerVc = [[TZAlbumPickerController alloc] init];
     albumPickerVc.isFirstAppear = YES;
     albumPickerVc.columnNumber = columnNumber;
+
     self = [super initWithRootViewController:albumPickerVc];
     if (self) {
         self.maxImagesCount = maxImagesCount > 0 ? maxImagesCount : 9; // Default is 9 / 默认最大可选9张图片
@@ -176,6 +177,11 @@
         self.sortAscendingByModificationDate = YES;
         self.autoDismiss = YES;
         self.columnNumber = columnNumber;
+        self.showSelectedIndex = YES;
+        self.iconThemeColor = [UIColor colorWithRed:35/255.0 green:24/255.0 blue:158/255.0 alpha:1.0];
+        self.naviBgColor = UIColor.whiteColor;
+        self.naviTitleColor = UIColor.blackColor;
+        self.barItemTextColor = UIColor.blackColor;
         [self configDefaultSetting];
         
         if (![[TZImageManager manager] authorizationStatusAuthorized]) {
