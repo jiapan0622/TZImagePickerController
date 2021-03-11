@@ -570,7 +570,13 @@
     _numberImageView.hidden = YES;
     _numberLabel.hidden = YES;
     _numberLabel.text = [NSString stringWithFormat:@"%zd",_tzImagePickerVc.selectedModels.count];
-    [_doneButton setTitle:[NSString stringWithFormat:@"完成(%zd)",_tzImagePickerVc.selectedModels.count] forState:UIControlStateNormal];
+    if (_tzImagePickerVc.selectedModels.count == 0) {
+        [_doneButton setTitle:@"完成" forState:UIControlStateNormal];
+
+    } else {
+        [_doneButton setTitle:[NSString stringWithFormat:@"完成(%zd)",_tzImagePickerVc.selectedModels.count] forState:UIControlStateNormal];
+
+    }
     
     _originalPhotoButton.selected = _isSelectOriginalPhoto;
     _originalPhotoLabel.hidden = !_originalPhotoButton.isSelected;
