@@ -164,7 +164,7 @@
     [_doneButton setTitle:_tzImagePickerVc.doneBtnTitleStr forState:UIControlStateNormal];
     [_doneButton setTitleColor:_tzImagePickerVc.oKButtonTitleColorNormal forState:UIControlStateNormal];
     
-    _doneButton.backgroundColor = [UIColor colorWithRed:35/255.0 green:24/255.0 blue:158/255.0 alpha:1.0];
+    _doneButton.backgroundColor = [UIColor colorWithRed:62/255.0 green:103/255.0 blue:249/255.0 alpha:1.0];
     [_doneButton setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
     
     _numberImageView = [[UIImageView alloc] initWithImage:_tzImagePickerVc.photoNumberIconImage];

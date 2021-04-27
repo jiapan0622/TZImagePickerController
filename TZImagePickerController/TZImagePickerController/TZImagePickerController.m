@@ -270,7 +270,7 @@
 
 - (void)configDefaultSetting {
     self.showSelectedIndex = YES;
-    self.iconThemeColor = [UIColor colorWithRed:35/255.0 green:24/255.0 blue:158/255.0 alpha:1.0];
+    self.iconThemeColor = [UIColor colorWithRed:62/255.0 green:103/255.0 blue:249/255.0 alpha:1.0];
     self.autoSelectCurrentWhenDone = YES;
     self.timeout = 30;
     self.photoWidth = 828.0;
